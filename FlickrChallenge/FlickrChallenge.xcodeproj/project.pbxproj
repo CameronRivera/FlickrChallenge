@@ -15,9 +15,11 @@
 		C40E467223C91114009ABEA7 /* CustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40E467123C91114009ABEA7 /* CustomTableCell.xib */; };
 		C40E467523C92C88009ABEA7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E467423C92C88009ABEA7 /* Photo.swift */; };
 		C40E467723C936AC009ABEA7 /* FlickrPhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E467623C936AC009ABEA7 /* FlickrPhotoAPI.swift */; };
+		C449E7B223CBDDBD005E5C9E /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E7B123CBDDBD005E5C9E /* Key.swift */; };
+		C449E7B423CBE1ED005E5C9E /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E7B323CBE1ED005E5C9E /* FavouritesViewController.swift */; };
 		C48BF05123C693F60095E06C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48BF05023C693F60095E06C /* AppDelegate.swift */; };
 		C48BF05323C693F60095E06C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48BF05223C693F60095E06C /* SceneDelegate.swift */; };
-		C48BF05523C693F60095E06C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48BF05423C693F60095E06C /* ViewController.swift */; };
+		C48BF05523C693F60095E06C /* SearchPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48BF05423C693F60095E06C /* SearchPhotoViewController.swift */; };
 		C48BF05823C693F60095E06C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48BF05623C693F60095E06C /* Main.storyboard */; };
 		C48BF05A23C693F80095E06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C48BF05923C693F80095E06C /* Assets.xcassets */; };
 		C48BF05D23C693F80095E06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48BF05B23C693F80095E06C /* LaunchScreen.storyboard */; };
@@ -43,10 +45,12 @@
 		C40E467123C91114009ABEA7 /* CustomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableCell.xib; sourceTree = "<group>"; };
 		C40E467423C92C88009ABEA7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C40E467623C936AC009ABEA7 /* FlickrPhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoAPI.swift; sourceTree = "<group>"; };
+		C449E7B123CBDDBD005E5C9E /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		C449E7B323CBE1ED005E5C9E /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		C48BF04D23C693F60095E06C /* FlickrChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48BF05023C693F60095E06C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C48BF05223C693F60095E06C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C48BF05423C693F60095E06C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C48BF05423C693F60095E06C /* SearchPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewController.swift; sourceTree = "<group>"; };
 		C48BF05723C693F60095E06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C48BF05923C693F80095E06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C48BF05C23C693F80095E06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,13 +83,6 @@
 			children = (
 			);
 			path = Persistence;
-			sourceTree = "<group>";
-		};
-		C40E466A23C90E39009ABEA7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C40E466F23C910A2009ABEA7 /* Xibs */ = {
@@ -132,7 +129,6 @@
 				C40E466F23C910A2009ABEA7 /* Xibs */,
 				C40E466523C90107009ABEA7 /* Persistence */,
 				C48BF07723C694450095E06C /* NetworkHelper */,
-				C40E466A23C90E39009ABEA7 /* New Group */,
 				C48BF07523C694320095E06C /* ViewControllers */,
 				C48BF07423C694280095E06C /* Secrets */,
 				C48BF07323C694180095E06C /* Storyboards */,
@@ -173,6 +169,7 @@
 		C48BF07423C694280095E06C /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
+				C449E7B123CBDDBD005E5C9E /* Key.swift */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -180,7 +177,8 @@
 		C48BF07523C694320095E06C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C48BF05423C693F60095E06C /* ViewController.swift */,
+				C48BF05423C693F60095E06C /* SearchPhotoViewController.swift */,
+				C449E7B323CBE1ED005E5C9E /* FavouritesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,10 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C449E7B423CBE1ED005E5C9E /* FavouritesViewController.swift in Sources */,
 				C40E466823C90C3E009ABEA7 /* UIImageView+Extensions.swift in Sources */,
 				C40E466223C900A5009ABEA7 /* NetworkHelper.swift in Sources */,
+				C449E7B223CBDDBD005E5C9E /* Key.swift in Sources */,
 				C40E467723C936AC009ABEA7 /* FlickrPhotoAPI.swift in Sources */,
-				C48BF05523C693F60095E06C /* ViewController.swift in Sources */,
+				C48BF05523C693F60095E06C /* SearchPhotoViewController.swift in Sources */,
 				C40E467523C92C88009ABEA7 /* Photo.swift in Sources */,
 				C40E466C23C90E60009ABEA7 /* UIViewController+Extensions.swift in Sources */,
 				C48BF05123C693F60095E06C /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchPhotoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource{
+extension SearchPhotoViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let xCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as? CustomImageCell else {
@@ -51,10 +51,10 @@ extension ViewController: UITableViewDataSource{
      
 }
 
-extension ViewController: UITableViewDelegate{
+extension SearchPhotoViewController: UITableViewDelegate{
     
 }
 
-extension ViewController: UISearchBarDelegate{
+extension SearchPhotoViewController: UISearchBarDelegate{
     
 }
