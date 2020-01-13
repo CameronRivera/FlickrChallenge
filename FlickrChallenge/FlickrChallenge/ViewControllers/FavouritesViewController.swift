@@ -20,16 +20,23 @@ class FavouritesViewController: UIViewController{
         }
     }
     
+    var handler = PersistenceHelper<Photo>(fileName: "FlickrFavourites")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUp()
     }
     
-    private func setUo(){
+    private func setUp(){
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "CustomTableCell", bundle: nil), forCellReuseIdentifier: "imageCell")
-        
+        navigationItem.title = "Favourites"
+        do {
+            photographs = try handler.getObjects()
+        } catch {
+            showAlert("Persistence Error", "Could not retrieve photos from file FlickrFavourites")
+        }
     }
 }
 
@@ -51,5 +58,16 @@ extension FavouritesViewController: UITableViewDataSource{
 }
 
 extension FavouritesViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailedVC = storyboard?.instantiateViewController(withIdentifier: "DetailedViewController") as? DetailedViewController else {
+            showAlert("Segue Error", "Could not instantiate instance of Detailed View Controller.")
+            return
+        }
+        detailedVC.currentPhoto = photographs[indexPath.row]
+        navigationController?.pushViewController(detailedVC, animated: true)
+    }
 }

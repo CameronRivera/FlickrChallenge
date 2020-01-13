@@ -9,10 +9,15 @@
 import Foundation
 
 struct PhotoWrapper: Codable{
-    let photos: [Photo]
+    let photos: MetaData
 }
 
-struct Photo: Codable{
+struct MetaData: Codable{
+    let photo: [Photo]
+}
+
+struct Photo: Codable, Equatable{
+    
     let id: String
     let owner: String
     let secret: String
@@ -20,7 +25,15 @@ struct Photo: Codable{
     let farm: Int
     let title: String
     let description: DescriptionWrapper
-    let url: String
+    let url: String?
+    
+    static func == (lhs: Photo, rhs: Photo) -> Bool {
+        if lhs.id == rhs.id{
+            return true
+        } else {
+            return false
+        }
+    }
     
     enum CodingKeys: String, CodingKey{
         case id = "id"
